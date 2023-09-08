@@ -1,4 +1,16 @@
-Instructions:
+# pybind11 wrapper for c++ star-tracker
+
+Wrapper for Carsten Schmitt's star-tracker
+
+https://www.lost-infinity.com/category/automatic-star-recognizer/
+
+Carsten's repo
+
+https://github.com/carsten0x51h/star_recognizer
+
+![Star-tracker Output](startracker_output.jpeg)
+
+# Instructions:
 
 cmake CMakeLists.txt
 make
@@ -7,7 +19,7 @@ To distribute:
 
 make clean-all
 
-Python integration:
+# Python integration:
 
 pip3 install pycimg
 pip3 install astropy
@@ -16,6 +28,8 @@ pip3 install matplotlib
 python3
 from py_run_startracker import tracker
 tracker("test.fits")
+
+# Output
 
 root@dmoloney-MOBL1:/mnt/c/Users/dmoloney/Desktop/MyGithub/StarSee/star_tracker# python3
 Python 3.8.2 (default, Jul 16 2020, 14:00:26)
@@ -188,5 +202,5 @@ Recognized 72 stars...
 69 cogCentroid=(   260.11,   120.517), , maxPixValue:    20615, sat: 0, hfd:    5.86115, fwhmHorz:    1.08879, fwhmVert:    1.29098
 70 cogCentroid=(  272.376,   122.001), , maxPixValue:  57317.6, sat: 0, hfd:    9.10151, fwhmHorz:    1.21287, fwhmVert:    1.15347
 71 cogCentroid=(  272.084,   28.9411), , maxPixValue:  19696.9, sat: 0, hfd:    11.7114, fwhmHorz:    1.61175, fwhmVert:    1.36004
-root@dmoloney-MOBL1:/mnt/c/Users/dmoloney/Desktop/MyGithub/StarSee/star_tracker#
+
 
