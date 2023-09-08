@@ -1,4 +1,4 @@
-# pybind11 wrapper for c++ star-tracker
+# pybind11 wrapper for C++ star-tracker
 
 Wrapper for Carsten Schmitt's star-tracker
 
