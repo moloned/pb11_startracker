@@ -1,0 +1,11 @@
+default: star_tracker
+star_tracker:
+#	g++ run_startracker.cpp star_tracker.cpp -o run_startracker -v -Wl,--verbose -lX11 -lpthread -lCCfits -lgsl -lgslcblas -std=c++0x -ljpeg -L /usr/local/lib -L /usr/local/src/CCfits/ -L /usr/local/src/CCfits/.libs/
+	g++ run_startracker.cpp star_tracker.cpp -o run_startracker -lX11 -lpthread -lCCfits -lgsl -lgslcblas -std=c++0x -ljpeg -L /usr/local/lib -L /usr/local/src/CCfits/ -L /usr/local/src/CCfits/.libs/
+	./run_startracker test.fits
+pb11:
+	g++ -O3 -Wall -shared -std=c++11 -fPIC `python3 -m pybind11 --includes` pb11_startracker.cpp star_tracker.cpp -o pb11_startracker`python3-config --extension-suffix` -lX11 -lpthread -lCCfits -lgsl -lgslcblas -std=c++0x -ljpeg -L /usr/local/lib -L /usr/local/src/CCfits/ -L /usr/local/src/CCfits/.libs/
+repr:
+	g++ -O3 -Wall -shared -std=c++11 -fPIC `python3 -m pybind11 --includes` pb11_repr.cpp -o pb11_repr`python3-config --extension-suffix` 
+clean:
+	rm run_startracker
